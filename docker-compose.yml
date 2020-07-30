@@ -1,0 +1,15 @@
+---
+version: '3'
+services:
+  app:
+    container_name: curriculum-vitae-ide
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - '3001:3000'
+    environment:
+      - NODE_ENV=development
+    command: chmod +x /usr/src/app/docker-entrypoint.sh
