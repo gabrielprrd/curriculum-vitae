@@ -9,8 +9,7 @@ const fileReducers = (state = INITIAL_STATE, action) => {
     case actionsTypes.CREATE_FILE:
       return { ...state, files: [state.files] };
     case actionsTypes.DELETE_FILE:
-      // needs to create a way to remove the item
-      return { ...state, files: [state.files] };
+      return state; // not necessary for now
     default:
       return state;
   }

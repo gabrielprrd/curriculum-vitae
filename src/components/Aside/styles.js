@@ -20,16 +20,14 @@ export const Aside = styled.aside`
 `;
 
 export const FilesListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
+  padding-left: 10px;
 `;
 
 export const FolderContainer = styled.span`
   display: flex;
   cursor: pointer;
-  padding: 3px 0;
-  margin-left: 10px;
+  padding: 3px 0 3px 10px;
+  padding-left: 10px;
 
   &:hover {
     background: ${({ theme }) => theme.bodyPrimary};

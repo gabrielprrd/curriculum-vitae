@@ -29,7 +29,7 @@ export const TitleContainer = styled.span`
     font-size: 0.9rem;
     padding: 0 0 5px 0px;
     margin: 0 0 5px 0;
-    border-bottom: 0.5px solid ${({ theme }) => theme.path};
+    border-bottom: 0.5px solid ${({ theme }) => theme.success};
     display: inline-block;
   }
 `;

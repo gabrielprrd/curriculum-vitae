@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SPageContainer from '../../assets/GlobalStyles/pageContainer';
 import * as S from './styles';
 
@@ -7,14 +7,42 @@ import githubLogo from '../../assets/images/github-logo.png';
 import linkedinLogo from '../../assets/images/linkedin-logo.png';
 
 export default function Curriculum() {
+  const [animation, setAnimation] = useState({ isAnimationOver: false });
+  const [secondAnimation, setSecondAnimation] = useState({
+    isAnimationOver: false,
+  });
+
+  useEffect(() => {
+    function startSecondAnimation() {
+      setAnimation({ isAnimationOver: true });
+    }
+    setTimeout(() => {
+      startSecondAnimation();
+    }, 4000);
+  }, [animation]);
+
+  useEffect(() => {
+    function stopSecondAnimation() {
+      setSecondAnimation({ isAnimationOver: true });
+    }
+    setTimeout(() => {
+      stopSecondAnimation();
+    }, 8000);
+  }, [secondAnimation]);
+
   return (
     <SPageContainer>
       <S.CurriculumContainer>
-        <S.NamePositionContainer>
-          <h1>const Gabriel_Afonso = {'{'} </h1>
-          <h2>position: &apos;Fullstack Web Developer&apos;</h2>
-          <h1>{'};'}</h1>
-        </S.NamePositionContainer>
+        <S.NameContainer isAnimationOver={animation.isAnimationOver}>
+          <h1>Gabriel Afonso</h1>
+        </S.NameContainer>
+        {animation.isAnimationOver && (
+          <S.PositionContainer
+            isSecondAnimationOver={secondAnimation.isAnimationOver}
+          >
+            <h2>Fullstack Web Developer</h2>
+          </S.PositionContainer>
+        )}
         <S.ContactInfoSection>
           <p>+351 936 317 390</p>
           <p>gabriel.afonso.contato@hotmail.com</p>

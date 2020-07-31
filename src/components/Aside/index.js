@@ -1,11 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import actions from '../../actions/files';
 
 import * as S from './styles';
 
 export default function Aside() {
   const filesList = useSelector((state) => state.fileReducers.files);
+  // const filesOnTab = useSelector(
+  //   (state) => state.selectedFilesReducers.filesOnTab
+  // );
+  const dispatch = useDispatch();
+
+  function addFileToTabs(file) {
+    dispatch(actions.addFileToTabs(file));
+  }
 
   return (
     <S.Aside>
@@ -18,7 +27,9 @@ export default function Aside() {
           const link = file.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
             <NavLink to={`/${link}`} key={file}>
-              <S.FileContainer>{file}</S.FileContainer>
+              <S.FileContainer onClick={() => addFileToTabs(file)}>
+                {file}
+              </S.FileContainer>
             </NavLink>
           );
         })}

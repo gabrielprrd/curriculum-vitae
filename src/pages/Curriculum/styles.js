@@ -3,19 +3,62 @@ import styled from 'styled-components';
 // Containers
 
 export const CurriculumContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
   div > div {
     margin-top: 20px;
   }
+
+  /* Typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    30% {
+      border-color: ${({ theme }) => theme.path};
+    }
+  }
 `;
 
-export const NamePositionContainer = styled.div`
-  margin-bottom: 20px;
+export const NameContainer = styled.div`
+  display: inline-block;
+  display: table;
+
+  h1 {
+    overflow: ${({ isAnimationOver }) =>
+      isAnimationOver ? 'visible' : 'hidden'};
+    border-right: ${({ isAnimationOver }) =>
+      isAnimationOver ? '' : '0.15em solid'};
+    white-space: nowrap;
+    animation: ${({ isAnimationOver }) =>
+      isAnimationOver
+        ? 'none'
+        : 'typing 3s steps(30, end), blink-caret 0.5s step-end infinite'};
+  }
+`;
+
+export const PositionContainer = styled.div`
+  display: inline-block;
 
   h2 {
-    margin: 20px;
+    overflow: ${({ isSecondAnimationOver }) =>
+      isSecondAnimationOver ? 'visible' : 'hidden'};
+    border-right: ${({ isSecondAnimationOver }) =>
+      isSecondAnimationOver ? '' : '0.15em solid'};
+    white-space: nowrap;
+    animation: ${({ isSecondAnimationOver }) =>
+      isSecondAnimationOver
+        ? 'none'
+        : 'typing 3s steps(30, end), blink-caret 0.5s step-end infinite'};
   }
 `;
 
