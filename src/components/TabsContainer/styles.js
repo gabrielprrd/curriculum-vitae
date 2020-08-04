@@ -12,6 +12,9 @@ export const TabsContainer = styled.div`
     color: ${({ theme }) => theme.comment};
   }
 `;
+export const TabsFlexContainer = styled.div`
+  display: flex;
+`;
 
 export const TabsInnerContainer = styled.div`
   background: ${({ theme }) => theme.bodyPrimaryInactive};

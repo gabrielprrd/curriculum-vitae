@@ -7,13 +7,15 @@ import * as S from './styles';
 
 export default function Aside() {
   const filesList = useSelector((state) => state.fileReducers.files);
-  // const filesOnTab = useSelector(
-  //   (state) => state.selectedFilesReducers.filesOnTab
-  // );
+  const filesOnTab = useSelector(
+    (state) => state.selectedFilesReducers.tabFiles
+  );
   const dispatch = useDispatch();
 
   function addFileToTabs(file) {
-    dispatch(actions.addFileToTabs(file));
+    if (!filesOnTab.includes(file)) {
+      dispatch(actions.addFileToTabs(file));
+    }
   }
 
   return (

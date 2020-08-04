@@ -30,7 +30,6 @@ export const CurriculumContainer = styled.div`
 `;
 
 export const NameContainer = styled.div`
-  display: inline-block;
   display: table;
 
   h1 {
@@ -47,7 +46,7 @@ export const NameContainer = styled.div`
 `;
 
 export const PositionContainer = styled.div`
-  display: inline-block;
+  display: table;
 
   h2 {
     overflow: ${({ isSecondAnimationOver }) =>

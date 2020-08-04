@@ -11,6 +11,7 @@ export const Terminal = styled.div`
 
 export const EditableText = styled.span.attrs(() => ({
   contentEditable: 'true',
+  spellCheck: 'false',
   tabIndex: 1,
 }))`
   width: 50%;
@@ -29,7 +30,7 @@ export const TitleContainer = styled.span`
     font-size: 0.9rem;
     padding: 0 0 5px 0px;
     margin: 0 0 5px 0;
-    border-bottom: 0.5px solid ${({ theme }) => theme.success};
+    border-bottom: 0.5px solid ${({ theme }) => theme.path};
     display: inline-block;
   }
 `;

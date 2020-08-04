@@ -7,8 +7,9 @@ const actions = {
   deleteFile: () => ({
     type: actionsTypes.DELETE_FILE,
   }),
-  addFileToTabs: () => ({
+  addFileToTabs: (file) => ({
     type: actionsTypes.ADD_FILE_TO_TABS,
+    tabFiles: file,
   }),
   removeFileFromTabs: () => ({
     type: actionsTypes.REMOVE_FILE_FROM_TABS,
