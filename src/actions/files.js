@@ -14,6 +14,10 @@ const actions = {
   removeFileFromTabs: () => ({
     type: actionsTypes.REMOVE_FILE_FROM_TABS,
   }),
+  focusOnFile: (file) => ({
+    type: actionsTypes.FOCUS_ON_FILE,
+    focusedFile: file,
+  }),
 };
 
 export default actions;

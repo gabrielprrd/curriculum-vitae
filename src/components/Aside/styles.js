@@ -19,9 +19,7 @@ export const Aside = styled.aside`
   }
 `;
 
-export const FilesListContainer = styled.div`
-  padding-left: 10px;
-`;
+export const FilesListContainer = styled.div``;
 
 export const FolderContainer = styled.span`
   display: flex;
@@ -34,4 +32,10 @@ export const FolderContainer = styled.span`
   }
 `;
 
-export const FileContainer = styled(FolderContainer)``;
+export const FileContainer = styled(FolderContainer)`
+  background: ${({ theme, file, focusedFile }) =>
+    (focusedFile === file && theme.bodyPrimary) ||
+    (focusedFile !== file && theme.bodyPrimaryInactive)};
+
+  padding-left: 20px;
+`;

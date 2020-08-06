@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import fileReducers from './files';
-import selectedFilesReducers from './selectedFiles';
+import filesOnTabReducers from './filesOnTab';
+import focusedFileReducers from './focusedFile';
 
 const reducers = combineReducers({
   fileReducers,
-  selectedFilesReducers,
+  filesOnTabReducers,
+  focusedFileReducers,
 });
 
 export default reducers;

@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   tabFiles: ['curriculum.txt'],
 };
 
-const selectedFilesReducers = (state = INITIAL_STATE, action) => {
+const filesOnTabReducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionsTypes.ADD_FILE_TO_TABS:
       return { tabFiles: [...state.tabFiles, action.tabFiles] };
@@ -16,4 +16,4 @@ const selectedFilesReducers = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default selectedFilesReducers;
+export default filesOnTabReducers;

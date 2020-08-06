@@ -19,25 +19,30 @@ import TabsContainer from './components/TabsContainer/index';
 import Curriculum from './pages/Curriculum/index';
 import Portfolio from './pages/Portfolio/index';
 
+// Context
+import FocusedFileProvider from './contexts/focusedFileContext';
+
 function App() {
   const [theme, setTheme] = useState('dark');
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-      <>
-        <GlobalStyle />
-        <Layout>
-          <Router>
-            <Route exact path="/">
-              <Redirect to="/curriculum" />
-            </Route>
-            <Route path="/curriculum" component={Curriculum} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Aside />
-            <TabsContainer theme={theme} setTheme={setTheme} />
-          </Router>
-          <Terminal />
-        </Layout>
-      </>
+      <FocusedFileProvider>
+        <>
+          <GlobalStyle />
+          <Layout>
+            <Router>
+              <Route exact path="/">
+                <Redirect to="/curriculum" />
+              </Route>
+              <Route path="/curriculum" component={Curriculum} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Aside />
+              <TabsContainer theme={theme} setTheme={setTheme} />
+            </Router>
+            <Terminal />
+          </Layout>
+        </>
+      </FocusedFileProvider>
     </ThemeProvider>
   );
 }

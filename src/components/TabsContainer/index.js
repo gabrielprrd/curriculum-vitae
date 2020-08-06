@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { FocusedFileContext } from '../../contexts/focusedFileContext';
 import ToggleThemeButton from '../Buttons/ToggleThemeButton/index';
+
+import actions from '../../actions/files';
 
 import * as S from './styles';
 
 export default function TabsContainer({ theme, setTheme }) {
-  const filesOnTab = useSelector(
-    (state) => state.selectedFilesReducers.tabFiles
-  );
+  const dispatch = useDispatch();
+  const filesOnTab = useSelector((state) => state.filesOnTabReducers.tabFiles);
+  const { isFileFocused } = useContext(FocusedFileContext);
+
+  function focusOnFile(file) {
+    dispatch(actions.focusOnFile(file));
+  }
 
   return (
     <S.TabsContainer>
@@ -18,7 +25,13 @@ export default function TabsContainer({ theme, setTheme }) {
           const link = file.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
             <NavLink to={`/${link}`} key={file}>
-              <S.TabsInnerContainer>{file}</S.TabsInnerContainer>
+              <S.TabsInnerContainer
+                focusedFile={isFileFocused}
+                file={file}
+                onClick={() => focusOnFile(file)}
+              >
+                {file}
+              </S.TabsInnerContainer>
             </NavLink>
           );
         })}

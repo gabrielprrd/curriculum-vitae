@@ -17,11 +17,16 @@ export const TabsFlexContainer = styled.div`
 `;
 
 export const TabsInnerContainer = styled.div`
-  background: ${({ theme }) => theme.bodyPrimaryInactive};
+  background: ${({ theme, file, focusedFile }) =>
+    (focusedFile === file && theme.bodyPrimary) ||
+    (focusedFile !== file && theme.bodyPrimaryInactive)};
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 1px;
   padding: 8px 15px;
+  border-bottom: 1px solid
+    ${({ theme, file, focusedFile }) =>
+      (focusedFile === file && theme.path) || (focusedFile !== file && 'none')};
 `;
