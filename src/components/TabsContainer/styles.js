@@ -16,17 +16,22 @@ export const TabsFlexContainer = styled.div`
   display: flex;
 `;
 
-export const TabsInnerContainer = styled.div`
+export const InnerTab = styled.div`
+  cursor: pointer;
   background: ${({ theme, file, focusedFile }) =>
     (focusedFile === file && theme.bodyPrimary) ||
     (focusedFile !== file && theme.bodyPrimaryInactive)};
   height: 100%;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-right: 1px;
-  padding: 8px 15px;
-  border-bottom: 1px solid
+  padding: 8px 30px 8px 5px;
+  border-top: 1px solid
     ${({ theme, file, focusedFile }) =>
       (focusedFile === file && theme.path) || (focusedFile !== file && 'none')};
+`;
+
+export const Tab = styled.div`
+  position: relative;
+  display: flex;
 `;

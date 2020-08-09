@@ -2,14 +2,20 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { FocusedFileContext } from '../../contexts/focusedFileContext';
-import ToggleThemeButton from '../Buttons/ToggleThemeButton/index';
 
+// Context
+import { FocusedFileContext } from '../../contexts/focusedFileContext';
+
+// Components
+import ToggleThemeButton from '../Buttons/ToggleThemeButton/index';
+import CloseTabFileButton from '../Buttons/CloseTabFileButton/index';
+
+// Actions
 import actions from '../../actions/files';
 
 import * as S from './styles';
 
-export default function TabsContainer({ theme, setTheme }) {
+function TabsContainer({ theme, setTheme }) {
   const dispatch = useDispatch();
   const filesOnTab = useSelector((state) => state.filesOnTabReducers.tabFiles);
   const { isFileFocused } = useContext(FocusedFileContext);
@@ -18,21 +24,33 @@ export default function TabsContainer({ theme, setTheme }) {
     dispatch(actions.focusOnFile(file));
   }
 
+  function removeFileFromTabs(file) {
+    if (filesOnTab.length > 1) {
+      dispatch(actions.removeFileFromTabs(file));
+    }
+  }
+
   return (
     <S.TabsContainer>
       <S.TabsFlexContainer>
         {filesOnTab.map((file) => {
           const link = file.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
-            <NavLink to={`/${link}`} key={file}>
-              <S.TabsInnerContainer
-                focusedFile={isFileFocused}
+            <S.Tab>
+              <NavLink to={`/${link}`} key={file}>
+                <S.InnerTab
+                  focusedFile={isFileFocused}
+                  file={file}
+                  onClick={() => focusOnFile(file)}
+                >
+                  {file}
+                </S.InnerTab>
+              </NavLink>
+              <CloseTabFileButton
                 file={file}
-                onClick={() => focusOnFile(file)}
-              >
-                {file}
-              </S.TabsInnerContainer>
-            </NavLink>
+                removeFileFromTabs={() => removeFileFromTabs(file)}
+              />
+            </S.Tab>
           );
         })}
       </S.TabsFlexContainer>
@@ -40,6 +58,8 @@ export default function TabsContainer({ theme, setTheme }) {
     </S.TabsContainer>
   );
 }
+
+export default TabsContainer;
 
 TabsContainer.propTypes = {
   theme: PropTypes.string.isRequired,

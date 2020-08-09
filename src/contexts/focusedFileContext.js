@@ -8,11 +8,15 @@ export default function FocusedFileProvider({ children }) {
   const focusedFile = useSelector(
     (state) => state.focusedFileReducers.focusedFile
   );
+  const filesOnTab = useSelector((state) => state.filesOnTabReducers.tabFiles);
   const [isFileFocused, setIsFileFocused] = useState(focusedFile);
 
   useEffect(() => {
     setIsFileFocused(focusedFile);
-  }, [focusedFile]);
+    if (!filesOnTab.includes(focusedFile)) {
+      setIsFileFocused(filesOnTab[0]);
+    }
+  }, [focusedFile, filesOnTab]);
 
   return (
     <FocusedFileContext.Provider value={{ isFileFocused, setIsFileFocused }}>
@@ -22,5 +26,5 @@ export default function FocusedFileProvider({ children }) {
 }
 
 FocusedFileProvider.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };

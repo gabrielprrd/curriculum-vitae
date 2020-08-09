@@ -19,7 +19,7 @@ export default function Curriculum() {
     setTimeout(() => {
       startSecondAnimation();
     }, 4000);
-  }, [animation]);
+  }, []);
 
   useEffect(() => {
     function stopSecondAnimation() {
@@ -28,10 +28,10 @@ export default function Curriculum() {
     setTimeout(() => {
       stopSecondAnimation();
     }, 8000);
-  }, [secondAnimation]);
+  }, []);
 
   return (
-    <SPageContainer>
+    <SPageContainer suppressContentEditableWarning>
       <S.CurriculumContainer>
         <S.NameContainer isAnimationOver={animation.isAnimationOver}>
           <h1>Gabriel Afonso</h1>
@@ -114,13 +114,22 @@ export default function Curriculum() {
             </p>
           </S.ProjectsSectionInnerContainer>
 
-          <p>
-            To check this resume&apos;s repository click{' '}
+          <S.ProjectsSectionInnerContainer>
             <S.ExternalLink href="https://github.com/gabrielprrd/curriculum-vitae">
-              here
+              This website
             </S.ExternalLink>
-            .
-          </p>
+            <p>
+              This React app is my way to show some skills and creativity when
+              it comes to my passion of developing software. It simulates an IDE
+              like Visual Studio Code so it was interesting to explore new
+              approaches between Redux, react&apos;s Context API and
+              styled-components to make it work as a web app.
+            </p>
+            <p>
+              Also there is a design challenge when it comes to usability for HR
+              professionals without a background in software development.
+            </p>
+          </S.ProjectsSectionInnerContainer>
         </S.ProjectsSection>
 
         <S.TechSkillsSection>
