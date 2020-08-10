@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Terminal = styled.div`
-  grid-area: terminal;
+  grid-area: ${({ visibility }) => (visibility ? 'terminal' : '')};
   background: ${({ theme }) => theme.bodyPrimary};
   border-top: 0.5px solid ${({ theme }) => theme.text};
   padding: 10px;
@@ -26,6 +26,10 @@ export const BaseText = styled.p`
 export const TextFlexContainer = styled.div``;
 
 export const TitleContainer = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   h3 {
     font-size: 0.9rem;
     padding: 0 0 5px 0px;

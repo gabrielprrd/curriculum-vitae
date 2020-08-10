@@ -7,7 +7,7 @@ export const CheckBoxWrapper = styled.div`
 
 export const CheckBoxLabel = styled.label`
   position: absolute;
-  top: 1.5px;
+  top: 3px;
   left: 0;
   width: 50px;
   height: 26px;

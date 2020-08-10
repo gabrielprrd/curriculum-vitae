@@ -10,7 +10,8 @@ export const Aside = styled.aside`
   h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
-    padding: 10px;
+    padding: 7px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   }
 
   a {
@@ -24,8 +25,13 @@ export const FilesListContainer = styled.div``;
 export const FolderContainer = styled.span`
   display: flex;
   cursor: pointer;
-  padding: 3px 0 3px 10px;
+  padding: 6px 0 3px 10px;
   padding-left: 10px;
+
+  img {
+    height: 15px;
+    margin-right: 10px;
+  }
 
   &:hover {
     background: ${({ theme }) => theme.bodyPrimary};

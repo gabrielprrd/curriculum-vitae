@@ -1,8 +1,14 @@
 import React, { useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 import actions from '../../actions/files';
+
+// Context
 import { FocusedFileContext } from '../../contexts/focusedFileContext';
+
+// Images
+import FolderIcon from '../../assets/images/folder-logo.png';
 
 import * as S from './styles';
 
@@ -13,7 +19,8 @@ export default function Aside() {
   const { isFileFocused } = useContext(FocusedFileContext);
 
   function addFileToTabs(file) {
-    if (!filesOnTab.includes(file)) {
+    const list = filesOnTab.map((item) => item.title);
+    if (!list.includes(file.title)) {
       dispatch(actions.addFileToTabs(file));
     }
     dispatch(actions.focusOnFile(file));
@@ -23,19 +30,22 @@ export default function Aside() {
     <S.Aside>
       <h3>Explorer</h3>
       <S.FolderContainer>
+        <img src={FolderIcon} alt="Folder icon" />
         <p>src</p>
       </S.FolderContainer>
       <S.FilesListContainer>
         {filesList.map((file) => {
-          const link = file.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
+          const link = file.title.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
-            <NavLink to={`/${link}`} key={file}>
+            <NavLink to={`/${link}`} key={file.title}>
               <S.FileContainer
                 focusedFile={isFileFocused}
                 file={file}
                 onClick={() => addFileToTabs(file)}
               >
-                {file}
+                <img src={file.icon} alt="file icon" />
+
+                {file.title}
               </S.FileContainer>
             </NavLink>
           );

@@ -1,7 +1,10 @@
 import actionsTypes from '../constants/files';
 
+// Images
+import textIcon from '../assets/images/txt-logo.png';
+
 const INITIAL_STATE = {
-  tabFiles: ['curriculum.txt'],
+  tabFiles: [{ title: 'curriculum.txt', icon: textIcon }],
 };
 
 const filesOnTabReducers = (state = INITIAL_STATE, action) => {

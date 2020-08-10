@@ -6,6 +6,7 @@ export const TabsContainer = styled.div`
   background: ${({ theme }) => theme.bodyPrimaryInactive};
   display: flex;
   justify-content: space-between;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 
   a {
     text-decoration: none;
@@ -29,6 +30,11 @@ export const InnerTab = styled.div`
   border-top: 1px solid
     ${({ theme, file, focusedFile }) =>
       (focusedFile === file && theme.path) || (focusedFile !== file && 'none')};
+
+  img {
+    height: 15px;
+    margin: 0 8px 0 3px;
+  }
 `;
 
 export const Tab = styled.div`

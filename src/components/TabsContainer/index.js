@@ -34,16 +34,17 @@ function TabsContainer({ theme, setTheme }) {
     <S.TabsContainer>
       <S.TabsFlexContainer>
         {filesOnTab.map((file) => {
-          const link = file.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
+          const link = file.title.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
-            <S.Tab>
-              <NavLink to={`/${link}`} key={file}>
+            <S.Tab key={file.title}>
+              <NavLink to={`/${link}`}>
                 <S.InnerTab
                   focusedFile={isFileFocused}
                   file={file}
                   onClick={() => focusOnFile(file)}
                 >
-                  {file}
+                  <img src={file.icon} alt="file icon" />
+                  {file.title}
                 </S.InnerTab>
               </NavLink>
               <CloseTabFileButton

@@ -21,11 +21,13 @@ import Portfolio from './pages/Portfolio/index';
 
 // Context
 import FocusedFileProvider from './contexts/focusedFileContext';
+// import LayoutProvider from './contexts/layoutContext';
 
 function App() {
   const [theme, setTheme] = useState('dark');
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+      {/* <LayoutProvider> */}
       <FocusedFileProvider>
         <>
           <GlobalStyle />
@@ -43,6 +45,7 @@ function App() {
           </Layout>
         </>
       </FocusedFileProvider>
+      {/* </LayoutProvider> */}
     </ThemeProvider>
   );
 }
