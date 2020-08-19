@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import * as S from './styles';
 
-import HideTerminalButton from '../Buttons/HideTerminalButton/index';
+import downloadablePdf from '../../assets/downloadablePdf';
 
 export default function Terminal() {
-  const [terminalVisibility, setTerminalVisibility] = useState(true);
+  const [input, setInput] = useState('');
+  const [feedback, setFeedback] = useState('');
   const base = 'employer:~/development/curriculum-vitae-ide$';
   const textInput = useRef();
 
@@ -12,30 +13,50 @@ export default function Terminal() {
     textInput.current.focus();
   }
 
-  function hideTerminal() {
-    setTerminalVisibility(false);
+  function handleChange(event) {
+    setInput(event.target.value);
+  }
+
+  function downloadPdf() {
+    window.location.href = downloadablePdf;
+  }
+
+  function handleEnter(event) {
+    if (event.charCode === 13) {
+      const formattedInput = input.replace(/\s\s+/g, ' ').trim();
+      if (formattedInput === 'npm run download') {
+        downloadPdf();
+        const string = 'Preparing download... ';
+        setFeedback(string);
+        setTimeout(() => {
+          setFeedback(`${string} Done! Enjoy the pdf version.`);
+        }, 3000);
+      } else {
+        setFeedback(`Error: ${formattedInput} is not a command.`);
+      }
+    }
   }
 
   return (
     <>
-      {terminalVisibility && (
-        <S.Terminal
-          onClick={focusEditableTerminal}
-          visibility={terminalVisibility ? 1 : 0}
-        >
-          <S.TitleContainer>
-            <h3>Terminal</h3>
-            <HideTerminalButton hideTerminal={hideTerminal} />
-          </S.TitleContainer>
-          <S.TextFlexContainer>
-            <S.BaseText>
-              <strong>{base}</strong>
-              &emsp;
-            </S.BaseText>
-            <S.EditableText ref={textInput} />
-          </S.TextFlexContainer>
-        </S.Terminal>
-      )}
+      <S.Terminal onClick={focusEditableTerminal}>
+        <S.TitleContainer>
+          <h3>Terminal</h3>
+        </S.TitleContainer>
+        <S.TextFlexContainer>
+          <S.BaseText>
+            <strong>{base}</strong>
+            &emsp;
+          </S.BaseText>
+          <S.EditableText
+            ref={textInput}
+            value={input}
+            onChange={(event) => handleChange(event)}
+            onKeyPress={(event) => handleEnter(event)}
+          />
+        </S.TextFlexContainer>
+        <S.FeedbackText>{feedback}</S.FeedbackText>
+      </S.Terminal>
     </>
   );
 }

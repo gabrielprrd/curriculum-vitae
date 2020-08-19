@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import SPageContainer from '../../assets/GlobalStyles/pageContainer';
 import * as S from './styles';
 
+import downloadablePdf from '../../assets/downloadablePdf';
+
 // Images
 import githubLogo from '../../assets/images/github-logo.png';
 import linkedinLogo from '../../assets/images/linkedin-logo.png';
@@ -31,7 +33,7 @@ export default function Curriculum() {
   }, []);
 
   return (
-    <SPageContainer suppressContentEditableWarning>
+    <SPageContainer>
       <S.CurriculumContainer>
         <S.NameContainer isAnimationOver={animation.isAnimationOver}>
           <h1>Gabriel Afonso</h1>
@@ -44,8 +46,27 @@ export default function Curriculum() {
           </S.PositionContainer>
         )}
         <S.ContactInfoSection>
-          <p>+351 936 317 390</p>
-          <p>gabriel.afonso.contato@hotmail.com</p>
+          <S.ContactInnerSection>
+            <span role="img" aria-label="smartphone emoji">
+              📞
+            </span>
+            <p>+351 936 317 390</p>
+          </S.ContactInnerSection>
+          <S.ContactInnerSection>
+            <span role="img" aria-label="computer emoji">
+              🖥
+            </span>
+            <S.MailLink href="mailto:gabriel.afonso.contato@hotmail.com">
+              gabriel.afonso.contato@hotmail.com
+            </S.MailLink>
+          </S.ContactInnerSection>
+          <S.ContactInnerSection>
+            <span role="img" aria-label="computer emoji">
+              🏘
+            </span>
+            <p>Campanhã, Porto</p>
+          </S.ContactInnerSection>
+
           <S.SocialMediaContainer>
             <S.GithubContainer>
               <img src={githubLogo} alt="github logo" />
@@ -79,9 +100,8 @@ export default function Curriculum() {
             </S.ExternalLink>
             <p>
               A RESTful application implementing the MERN stack (MongoDB,
-              Express.js, React and Node.js) which the user can create an
-              account, search for gifs through the Giphy API and save its
-              favorites.
+              Express.js, React and Node.js) which users can create an account,
+              search for gifs through the Giphy API and save their favorites.
             </p>
           </S.ProjectsSectionInnerContainer>
           <S.ProjectsSectionInnerContainer>
@@ -119,15 +139,31 @@ export default function Curriculum() {
               This website
             </S.ExternalLink>
             <p>
-              This React app is my way to show some skills and creativity when
-              it comes to my passion of developing software. It simulates an IDE
-              like Visual Studio Code so it was interesting to explore new
-              approaches between Redux, react&apos;s Context API and
-              styled-components to make it work as a web app.
+              Personal Website containing a resume and portfolio, built with
+              React. The idea is to show passion and creativity about software
+              development, simulating an IDE, since it’s the platform
+              develo-pers have most contact with.
+            </p>
+
+            <p>
+              The main challenge was the user experience, since not every HR
+              professional have been exposed to development tools.
             </p>
             <p>
-              Also there is a design challenge when it comes to usability for HR
-              professionals without a background in software development.
+              React&apos;s Context API + Redux + Styled-components were used to
+              make an efficient state management, so the components can
+              comunicate properly.
+            </p>
+          </S.ProjectsSectionInnerContainer>
+
+          <S.ProjectsSectionInnerContainer>
+            <S.ExternalLink href="https://github.com/gabrielprrd/Col-gio-Revisa-Institutional-Website">
+              Colégio Revisa Institutional Website
+            </S.ExternalLink>
+            <p>
+              A website built with Vue.js and Firebase to grasp some knowledge
+              with these technologies and compare them with other approaches
+              like React and a standard backend built with Node.js.
             </p>
           </S.ProjectsSectionInnerContainer>
         </S.ProjectsSection>
@@ -138,6 +174,8 @@ export default function Curriculum() {
             <h3>Front end</h3>
             <p>- HTML, CSS(SASS/SCSS) and Javascript</p>
             <p>- React: Redux, Router, Styled-components</p>
+            <p>- Styling libraries such as Bootstrap and Material-UI</p>
+            <p>- Knowledge of Vue.js</p>
           </S.TechSkillsInnerContainer>
 
           <S.TechSkillsInnerContainer>
@@ -156,13 +194,14 @@ export default function Curriculum() {
             </path>
             <p>- Code linting with ESLint and Prettier</p>
             <p>- Better deployment with Docker containers</p>
-            <p>- Jest for unit testing</p>
+            <p>- Knowledge of Jest for unit testing</p>
           </S.TechSkillsInnerContainer>
         </S.TechSkillsSection>
 
         <S.DownloadInstructions>
-          To download the pdf click here or type{' '}
-          <S.NpmCommand>npm run download </S.NpmCommand>
+          To download the pdf{' '}
+          <S.ExternalLink href={downloadablePdf}>click here</S.ExternalLink> or
+          type <S.NpmCommand>npm run download </S.NpmCommand>
           on the terminal :)
         </S.DownloadInstructions>
       </S.CurriculumContainer>

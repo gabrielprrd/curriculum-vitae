@@ -1,15 +1,5 @@
 import actionsTypes from '../constants/files';
-
-// Images
-import textIcon from '../assets/images/txt-logo.png';
-import jsIcon from '../assets/images/js-logo.png';
-
-const INITIAL_STATE = {
-  files: [
-    { title: 'curriculum.txt', icon: textIcon },
-    { title: 'portfolio.js', icon: jsIcon }
-  ],
-};
+import INITIAL_STATE from './filesStore';
 
 const fileReducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {

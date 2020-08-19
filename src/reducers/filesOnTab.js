@@ -1,13 +1,11 @@
 import actionsTypes from '../constants/files';
+import INITIAL_STATE from './filesStore';
 
-// Images
-import textIcon from '../assets/images/txt-logo.png';
-
-const INITIAL_STATE = {
-  tabFiles: [{ title: 'curriculum.txt', icon: textIcon }],
+const TAB_INITIAL_STATE = {
+  tabFiles: [...INITIAL_STATE.files],
 };
 
-const filesOnTabReducers = (state = INITIAL_STATE, action) => {
+const filesOnTabReducers = (state = TAB_INITIAL_STATE, action) => {
   switch (action.type) {
     case actionsTypes.ADD_FILE_TO_TABS:
       return { tabFiles: [...state.tabFiles, action.tabFiles] };

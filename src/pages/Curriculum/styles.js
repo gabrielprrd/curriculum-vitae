@@ -61,7 +61,25 @@ export const PositionContainer = styled.div`
   }
 `;
 
-export const ContactInfoSection = styled.div``;
+export const ContactInfoSection = styled.address`
+  font-style: normal;
+  margin-top: 10px;
+`;
+
+export const ContactInnerSection = styled.div`
+  display: flex;
+  margin-top: 7px;
+
+  span {
+    margin-right: 5px;
+  }
+`;
+
+export const MailLink = styled.a.attrs(() => ({
+  contentEditable: 'false',
+}))`
+  color: ${({ theme }) => theme.text};
+`;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
@@ -93,8 +111,8 @@ export const ProjectsSection = styled.div`
 `;
 
 export const ProjectsSectionInnerContainer = styled.div`
-  a {
-    margin: 20px 0 20px 0;
+  p {
+    margin-top: 5px;
   }
 `;
 
@@ -124,5 +142,6 @@ export const NpmCommand = styled.p`
 export const ExternalLink = styled.a.attrs(() => ({
   contentEditable: 'false',
 }))`
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.path};
+  text-decoration: link;
 `;

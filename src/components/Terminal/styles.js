@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Terminal = styled.div`
-  grid-area: ${({ visibility }) => (visibility ? 'terminal' : '')};
+  grid-area: terminal;
   background: ${({ theme }) => theme.bodyPrimary};
   border-top: 0.5px solid ${({ theme }) => theme.text};
   padding: 10px;
@@ -9,11 +9,14 @@ export const Terminal = styled.div`
   overflow: auto;
 `;
 
-export const EditableText = styled.span.attrs(() => ({
-  contentEditable: 'true',
-  spellCheck: 'false',
+export const EditableText = styled.input.attrs(() => ({
   tabIndex: 1,
 }))`
+  background: ${({ theme }) => theme.bodyPrimary};
+  border: none;
+  color: ${({ theme }) => theme.text};
+  font-weight: 700;
+  font-size: 1em;
   width: 50%;
   display: inline-block;
 `;
@@ -23,7 +26,9 @@ export const BaseText = styled.p`
   float: left;
 `;
 
-export const TextFlexContainer = styled.div``;
+export const TextFlexContainer = styled.div`
+  display: flex;
+`;
 
 export const TitleContainer = styled.span`
   display: flex;
@@ -38,3 +43,5 @@ export const TitleContainer = styled.span`
     display: inline-block;
   }
 `;
+
+export const FeedbackText = styled.div``;

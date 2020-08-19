@@ -27,8 +27,7 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "styled-components": "^5.1.1",
-    "styled-theming": "^2.2.0",
-    "typeface-droid-sans-mono": "0.0.44"
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
