@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SPageContainer from '../../assets/GlobalStyles/pageContainer';
 import * as S from './styles';
 
+import Projects from '../../assets/projects';
 import downloadablePdf from '../../assets/downloadablePdf';
 
 // Images
@@ -94,78 +95,14 @@ export default function Curriculum() {
 
         <S.ProjectsSection>
           <h2>Projects</h2>
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/Fullstack-Giphy-App">
-              Gabriska&apos;s Gif Searcher
-            </S.ExternalLink>
-            <p>
-              A RESTful application implementing the MERN stack (MongoDB,
-              Express.js, React and Node.js) which users can create an account,
-              search for gifs through the Giphy API and save their favorites.
-            </p>
-          </S.ProjectsSectionInnerContainer>
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/nortada-ecommerce-clone-backend">
-              Nortada&apos;s E-commerce Backend
-            </S.ExternalLink>
-            <p>
-              The backend of a craft beer e-commerce, consuming the
-              Stripe&apos;s API to deal with payment process.
-            </p>
-          </S.ProjectsSectionInnerContainer>
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/nortada-ecommerce-clone-frontend">
-              Nortada&apos;s E-commerce Frontend
-            </S.ExternalLink>
-            <p>
-              The frontend of the previous project, implemented as a Single Page
-              Application with React, using Redux to better state management and
-              scalability.
-            </p>
-          </S.ProjectsSectionInnerContainer>
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/nortada-ecommerce-clone-frontend">
-              The Calorie Police
-            </S.ExternalLink>
-            <p>
-              React application that calculates user&apos;s daily caloric needs,
-              save it on LocalStorage and displays meals that fit the diet,
-              consuming the Spoonacular API.
-            </p>
-          </S.ProjectsSectionInnerContainer>
-
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/curriculum-vitae">
-              This website
-            </S.ExternalLink>
-            <p>
-              Personal Website containing a resume and portfolio, built with
-              React. The idea is to show passion and creativity about software
-              development, simulating an IDE, since it’s the platform
-              develo-pers have most contact with.
-            </p>
-
-            <p>
-              The main challenge was the user experience, since not every HR
-              professional have been exposed to development tools.
-            </p>
-            <p>
-              React&apos;s Context API + Redux + Styled-components were used to
-              make an efficient state management, so the components can
-              comunicate properly.
-            </p>
-          </S.ProjectsSectionInnerContainer>
-
-          <S.ProjectsSectionInnerContainer>
-            <S.ExternalLink href="https://github.com/gabrielprrd/Col-gio-Revisa-Institutional-Website">
-              Colégio Revisa Institutional Website
-            </S.ExternalLink>
-            <p>
-              A website built with Vue.js and Firebase to grasp some knowledge
-              with these technologies and compare them with other approaches
-              like React and a standard backend built with Node.js.
-            </p>
-          </S.ProjectsSectionInnerContainer>
+          {Projects.map((project) => (
+            <S.ProjectsSectionInnerContainer>
+              <S.ExternalLink href={project.link}>
+                {project.title}
+              </S.ExternalLink>
+              <p>{project.description}</p>
+            </S.ProjectsSectionInnerContainer>
+          ))}
         </S.ProjectsSection>
 
         <S.TechSkillsSection>
