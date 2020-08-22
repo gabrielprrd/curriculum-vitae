@@ -13,11 +13,11 @@ export const darkTheme = {
 export const lightTheme = {
   bodyPrimary: '#FFFFFF',
   bodyPrimaryInactive: '#BDBDBD',
-  bodySecondary: '#757575',
+  bodySecondary: '#dcf9e5',
   bodyGap: '#E1BEE7',
   text: '#212121',
   comment: '#3700B3',
   success: '#03EDAC6',
   command: '#018786',
-  path: '#bd93f9',
+  path: '#3700B3',
 };

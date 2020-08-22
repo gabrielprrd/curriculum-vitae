@@ -34,6 +34,7 @@ export default function Terminal() {
       } else {
         setFeedback(`Error: ${formattedInput} is not a command.`);
       }
+      setInput('');
     }
   }
 

@@ -13,5 +13,7 @@ export default function CloseTabFileButton({ removeFileFromTabs, file }) {
 
 CloseTabFileButton.propTypes = {
   removeFileFromTabs: PropTypes.func.isRequired,
-  file: PropTypes.node.isRequired,
+  file: PropTypes.shape({
+    tabFiles: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
 };

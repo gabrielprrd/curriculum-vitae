@@ -14,10 +14,11 @@ export const EditableText = styled.input.attrs(() => ({
 }))`
   background: ${({ theme }) => theme.bodyPrimary};
   border: none;
+  height: 100%;
   color: ${({ theme }) => theme.text};
   font-weight: 700;
   font-size: 1em;
-  width: 50%;
+  width: auto;
   display: inline-block;
 `;
 
@@ -32,8 +33,8 @@ export const TextFlexContainer = styled.div`
 
 export const TitleContainer = styled.span`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
 
   h3 {
     font-size: 0.9rem;
@@ -44,4 +45,6 @@ export const TitleContainer = styled.span`
   }
 `;
 
-export const FeedbackText = styled.div``;
+export const FeedbackText = styled.div`
+  float: left;
+`;

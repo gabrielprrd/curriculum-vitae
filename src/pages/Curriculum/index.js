@@ -96,7 +96,7 @@ export default function Curriculum() {
         <S.ProjectsSection>
           <h2>Projects</h2>
           {Projects.map((project) => (
-            <S.ProjectsSectionInnerContainer>
+            <S.ProjectsSectionInnerContainer key={project.title}>
               <S.ExternalLink href={project.link}>
                 {project.title}
               </S.ExternalLink>
@@ -109,7 +109,7 @@ export default function Curriculum() {
           <h2>Technical skills</h2>
           <S.TechSkillsInnerContainer>
             <h3>Front end</h3>
-            <p>- HTML, CSS(SASS/SCSS) and Javascript</p>
+            <p>- HTML, (S)CSS and Javascript</p>
             <p>- React: Redux, Router, Styled-components</p>
             <p>- Styling libraries such as Bootstrap and Material-UI</p>
             <p>- Knowledge of Vue.js</p>
@@ -126,9 +126,7 @@ export default function Curriculum() {
           <S.TechSkillsInnerContainer>
             <h3>Readability, organization and team tools</h3>
             <p>- Version control with Git</p>
-            <path>
-              - Well organized commits with Husky, Commitlint and Commitzen
-            </path>
+            <p>- Well organized commits with Husky, Commitlint and Commitzen</p>
             <p>- Code linting with ESLint and Prettier</p>
             <p>- Better deployment with Docker containers</p>
             <p>- Knowledge of Jest for unit testing</p>

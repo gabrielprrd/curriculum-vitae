@@ -24,6 +24,7 @@ export const FilesListContainer = styled.div``;
 
 export const FolderContainer = styled.span`
   display: flex;
+  flex-wrap: wrap;
   cursor: pointer;
   padding: 6px 0 3px 10px;
   padding-left: 10px;

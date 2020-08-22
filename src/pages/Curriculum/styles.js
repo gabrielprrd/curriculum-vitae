@@ -68,6 +68,7 @@ export const ContactInfoSection = styled.address`
 
 export const ContactInnerSection = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 7px;
 
   span {
@@ -75,14 +76,13 @@ export const ContactInnerSection = styled.div`
   }
 `;
 
-export const MailLink = styled.a.attrs(() => ({
-  contentEditable: 'false',
-}))`
+export const MailLink = styled.a`
   color: ${({ theme }) => theme.text};
 `;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 
@@ -134,14 +134,12 @@ export const DownloadInstructions = styled.p`
   margin: 20px 0;
 `;
 
-export const NpmCommand = styled.p`
+export const NpmCommand = styled.span`
   display: inline;
   color: ${({ theme }) => theme.command};
 `;
 
-export const ExternalLink = styled.a.attrs(() => ({
-  contentEditable: 'false',
-}))`
+export const ExternalLink = styled.a`
   color: ${({ theme }) => theme.path};
   text-decoration: link;
 `;
