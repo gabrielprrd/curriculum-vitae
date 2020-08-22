@@ -1,8 +1,13 @@
 import styled from 'styled-components';
+import device from '../../../assets/GlobalStyles/device';
 
 export const CheckBoxWrapper = styled.div`
   position: relative;
   margin-right: 15px;
+
+  @media ${device.mobileL} {
+    margin-bottom: 15px;
+  }
 `;
 
 export const CheckBoxLabel = styled.label`

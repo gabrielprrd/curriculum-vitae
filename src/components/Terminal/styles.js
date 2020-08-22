@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../assets/GlobalStyles/device';
 
 export const Terminal = styled.div`
   grid-area: terminal;
@@ -7,6 +8,10 @@ export const Terminal = styled.div`
   padding: 10px;
   position: relative;
   overflow: auto;
+
+  @media ${device.mobileL} {
+    height: 500px;
+  }
 `;
 
 export const EditableText = styled.input.attrs(() => ({

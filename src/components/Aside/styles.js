@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../assets/GlobalStyles/device';
 
 export const Aside = styled.aside`
   grid-area: aside;
@@ -17,6 +18,10 @@ export const Aside = styled.aside`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.success};
+  }
+
+  @media ${device.mobileL} {
+    display: none;
   }
 `;
 

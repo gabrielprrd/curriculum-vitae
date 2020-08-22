@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../../assets/GlobalStyles/device';
 
 export const CloseFileButton = styled.div`
   position: absolute;
@@ -6,6 +7,10 @@ export const CloseFileButton = styled.div`
   top: 7px;
   cursor: pointer;
   z-index: 99;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const Bar = styled.div`

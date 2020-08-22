@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 import SPageContainer from '../../assets/GlobalStyles/pageContainer';
+
 import Projects from '../../assets/projects';
 
 // images

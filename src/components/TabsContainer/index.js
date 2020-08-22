@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -16,6 +16,7 @@ import actions from '../../actions/files';
 import * as S from './styles';
 
 function TabsContainer({ theme, setTheme }) {
+  const [isMenuClicked, setClick] = useState(false);
   const dispatch = useDispatch();
   const filesOnTab = useSelector((state) => state.filesOnTabReducers.tabFiles);
   const { isFileFocused } = useContext(FocusedFileContext);
@@ -30,14 +31,22 @@ function TabsContainer({ theme, setTheme }) {
     }
   }
 
+  function toggleNav() {
+    setClick(!isMenuClicked);
+  }
+
+  function hideNav() {
+    setClick(false);
+  }
+
   return (
-    <S.TabsContainer>
+    <S.TabsContainer isMenuClicked={isMenuClicked}>
       <S.TabsFlexContainer>
         {filesOnTab.map((file) => {
           const link = file.title.replace(/[\.][^.]*$/gi, ''); // eslint-disable-line
           return (
             <S.Tab key={file.title}>
-              <NavLink to={`/${link}`}>
+              <NavLink to={`/${link}`} onClick={hideNav}>
                 <S.InnerTab
                   focusedFile={isFileFocused}
                   file={file}
@@ -56,6 +65,11 @@ function TabsContainer({ theme, setTheme }) {
         })}
       </S.TabsFlexContainer>
       <ToggleThemeButton theme={theme} setTheme={setTheme} />
+      <S.BurgerMenu onClick={toggleNav}>
+        <S.Bar isMenuClicked={isMenuClicked} />
+        <S.Bar2 isMenuClicked={isMenuClicked} />
+        <S.Bar3 isMenuClicked={isMenuClicked} />
+      </S.BurgerMenu>
     </S.TabsContainer>
   );
 }

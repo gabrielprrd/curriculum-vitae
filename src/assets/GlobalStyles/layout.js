@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from './device';
 
 const Layout = styled.div`
   display: grid;
@@ -9,6 +10,22 @@ const Layout = styled.div`
     'aside pagescontainer'
     'aside terminal';
   grid-gap: 1px;
+
+  @media ${device.tablet} {
+    grid-template-columns: 100vw;
+    grid-template-rows: 5vh 85vh 10vh;
+    grid-template-areas:
+      'tabscontainer'
+      'pagescontainer'
+      'terminal';
+  }
+
+  @media ${device.mobileL} {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+  }
 `;
 
 export default Layout;

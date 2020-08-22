@@ -26,7 +26,9 @@ export const ProjectContainer = styled.div`
   display: flex;
 `;
 
-export const ReadableContentContainer = styled.div`
+export const ReadableContentContainer = styled.div.attrs(({ index }) => ({
+  aos: index % 2 === 0 ? 'fade-right' : 'fade-left',
+}))`
   position: relative;
   order: ${({ index }) => (index % 2 === 0 ? '1' : '2')};
   display: flex;
