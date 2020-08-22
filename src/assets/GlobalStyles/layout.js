@@ -13,7 +13,7 @@ const Layout = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 100vw;
-    grid-template-rows: 5vh 85vh 10vh;
+    grid-template-rows: 5vh 80vh 15vh;
     grid-template-areas:
       'tabscontainer'
       'pagescontainer'

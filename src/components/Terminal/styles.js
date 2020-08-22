@@ -10,30 +10,9 @@ export const Terminal = styled.div`
   overflow: auto;
 
   @media ${device.mobileL} {
-    height: 500px;
+    height: 280px;
+    font-size: 0.8em;
   }
-`;
-
-export const EditableText = styled.input.attrs(() => ({
-  tabIndex: 1,
-}))`
-  background: ${({ theme }) => theme.bodyPrimary};
-  border: none;
-  height: 100%;
-  color: ${({ theme }) => theme.text};
-  font-weight: 700;
-  font-size: 1em;
-  width: auto;
-  display: inline-block;
-`;
-
-export const BaseText = styled.p`
-  color: ${({ theme }) => theme.success};
-  float: left;
-`;
-
-export const TextFlexContainer = styled.div`
-  display: flex;
 `;
 
 export const TitleContainer = styled.span`
@@ -48,6 +27,35 @@ export const TitleContainer = styled.span`
     border-bottom: 0.5px solid ${({ theme }) => theme.path};
     display: inline-block;
   }
+
+  @media ${device.mobileL} {
+    h3 {
+      font-size: 0.8em;
+    }
+  }
+`;
+
+export const TextFlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BaseText = styled.p`
+  color: ${({ theme }) => theme.success};
+  float: left;
+`;
+
+export const EditableText = styled.input.attrs(() => ({
+  tabIndex: 1,
+}))`
+  background: ${({ theme }) => theme.bodyPrimary};
+  border: none;
+  height: 100%;
+  color: ${({ theme }) => theme.text};
+  font-weight: 700;
+  font-size: 1em;
+  width: auto;
+  display: inline-block;
 `;
 
 export const FeedbackText = styled.div`
