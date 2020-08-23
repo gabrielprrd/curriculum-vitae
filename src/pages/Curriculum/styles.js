@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import device from '../../assets/GlobalStyles/device';
 
 // Containers
 
@@ -43,6 +44,11 @@ export const NameContainer = styled.div`
         ? 'none'
         : 'typing 3s steps(30, end), blink-caret 0.5s step-end infinite'};
   }
+
+  @media ${device.mobileL} {
+    margin-top: 5px;
+    font-size: 0.8em;
+  }
 `;
 
 export const PositionContainer = styled.div`
@@ -58,6 +64,11 @@ export const PositionContainer = styled.div`
       isSecondAnimationOver
         ? 'none'
         : 'typing 3s steps(30, end), blink-caret 0.5s step-end infinite'};
+  }
+
+  @media ${device.mobileL} {
+    margin-bottom: 20px;
+    font-size: 0.8em;
   }
 `;
 

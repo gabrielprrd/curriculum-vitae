@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
+import DroidSansMono from '../fonts/DroidSansMono.ttf';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Droid Sans Mono';
+    src: local('Droid Sans Mono'), local('Droid Sans Mono'),
+    url(${DroidSansMono}) format('truetype'); 
+    font-weight: 300;
+    font-style: normal;
+      };  
+
   * {
     /* reset */
     box-sizing: border-box;

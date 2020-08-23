@@ -33,7 +33,6 @@ export default function Portfolio() {
           </S.ReadableContentContainer>
           <S.ImageContainer index={index}>
             <img src={project.img} alt="project's screenshot" />
-            {/* <S.HoverBackground /> */}
           </S.ImageContainer>
         </S.ProjectContainer>
       ))}

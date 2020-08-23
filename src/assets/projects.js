@@ -1,4 +1,7 @@
 import screenshotTest from './images/screenshot-test.png';
+import curriculumImage from './images/screenshots/curriculum-ide.png';
+import gifSearcherImage from './images/screenshots/gif-searcher.png';
+import nortadaImage from './images/screenshots/nortada-ecommerce.png';
 
 const Projects = [
   {
@@ -8,7 +11,7 @@ const Projects = [
       search for gifs through the Giphy API and save their favorites.`,
     link: 'https://github.com/gabrielprrd/Fullstack-Giphy-App',
     technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Giphy API'],
-    img: screenshotTest,
+    img: gifSearcherImage,
   },
   {
     title: "Nortada's E-commerce Backend",
@@ -16,7 +19,7 @@ const Projects = [
     Stripe's API to deal with payment process.`,
     link: 'https://github.com/gabrielprrd/nortada-ecommerce-clone-backend',
     technologies: ['Node.js', 'Express.js', 'Stripe API'],
-    img: screenshotTest,
+    img: nortadaImage,
   },
   {
     title: "Nortada's E-commerce Frontend",
@@ -25,7 +28,7 @@ const Projects = [
     scalability.`,
     link: 'https://github.com/gabrielprrd/nortada-ecommerce-clone-frontend',
     technologies: ['React', 'Redux', 'Stripe API'],
-    img: screenshotTest,
+    img: nortadaImage,
   },
   {
     title: 'The Calorie Police',
@@ -50,7 +53,7 @@ const Projects = [
     comunicate properly.`,
     link: 'https://github.com/gabrielprrd/curriculum-vitae',
     technologies: ['React.js', 'Redux', 'Styled Components'],
-    img: screenshotTest,
+    img: curriculumImage,
   },
   {
     title: 'Colégio Revisa Website',
