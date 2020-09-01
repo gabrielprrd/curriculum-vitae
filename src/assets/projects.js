@@ -1,7 +1,7 @@
-import screenshotTest from './images/screenshot-test.png';
 import curriculumImage from './images/screenshots/curriculum-ide.png';
 import gifSearcherImage from './images/screenshots/gif-searcher.png';
 import nortadaImage from './images/screenshots/nortada-ecommerce.png';
+import caloriePoliceImage from './images/screenshots/calorie-police.png';
 
 const Projects = [
   {
@@ -18,7 +18,7 @@ const Projects = [
     description: `The backend of a craft beer e-commerce, consuming the
     Stripe's API to deal with payment process.`,
     link: 'https://github.com/gabrielprrd/nortada-ecommerce-clone-backend',
-    technologies: ['Node.js', 'Express.js', 'Stripe API'],
+    technologies: ['Node.js', 'Express.js', 'Stripe API', 'Jest'],
     img: nortadaImage,
   },
   {
@@ -34,16 +34,16 @@ const Projects = [
     title: 'The Calorie Police',
     description: `React application that calculates user's daily caloric needs,
     save it on LocalStorage and displays meals that fit the diet,
-    consuming the Spoonacular API.`,
+    consuming the Spoonacular API through a Node.js/Express server.`,
     link: 'https://github.com/gabrielprrd/The-Calorie-Police',
-    technologies: ['React.js', 'Material-UI', 'Spoonacular API'],
-    img: screenshotTest,
+    technologies: ['React.js', 'Node.js', 'Express.js', 'Spoonacular API'],
+    img: caloriePoliceImage,
   },
   {
     title: 'Curriculum Vitae IDE',
     description: `Personal Website containing a resume and portfolio, built with
     React. The idea is to show passion and creativity about software
-    development, simulating an IDE, since it’s the platform
+    development, simulating an IDE: the type of platform
     developers have most contact with.
 
     The main challenge was the user experience, since not every HR
@@ -54,15 +54,6 @@ const Projects = [
     link: 'https://github.com/gabrielprrd/curriculum-vitae',
     technologies: ['React.js', 'Redux', 'Styled Components'],
     img: curriculumImage,
-  },
-  {
-    title: 'Colégio Revisa Website',
-    description: `A website built with Vue.js and Firebase to grasp some knowledge
-    with these technologies and compare them with other approaches
-    like React and a standard backend built with Node.js.`,
-    link: 'https://github.com/gabrielprrd/Col-gio-Revisa-Institutional-Website',
-    technologies: ['Vue.js', 'Firebase', 'Sass'],
-    img: screenshotTest,
   }
 ];
 

@@ -43,7 +43,7 @@ export default function Curriculum() {
           <S.PositionContainer
             isSecondAnimationOver={secondAnimation.isAnimationOver}
           >
-            <h2>Fullstack Web Developer</h2>
+            <h2>Full Stack Web Developer</h2>
           </S.PositionContainer>
         )}
         <S.ContactInfoSection>

@@ -1,4 +1,4 @@
 const downloadablePdf =
-  'https://drive.google.com/uc?export=download&id=1Kf4r8_fNZXCSzJ7MU8pYadEmcb6RBPE0';
+  'https://drive.google.com/uc?export=download&id=1GTl2ZlZTmZLienWG92c-sRhyuqluS7gz';
 
 export default downloadablePdf;
