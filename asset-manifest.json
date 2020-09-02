@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.70fc82fe.chunk.js",
-    "main.js.map": "/static/js/main.70fc82fe.chunk.js.map",
+    "main.js": "/static/js/main.a8eae412.chunk.js",
+    "main.js.map": "/static/js/main.a8eae412.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d11e5f44.js",
     "runtime-main.js.map": "/static/js/runtime-main.d11e5f44.js.map",
-    "static/js/2.f2f0e8bc.chunk.js": "/static/js/2.f2f0e8bc.chunk.js",
-    "static/js/2.f2f0e8bc.chunk.js.map": "/static/js/2.f2f0e8bc.chunk.js.map",
+    "static/js/2.09c2cdc1.chunk.js": "/static/js/2.09c2cdc1.chunk.js",
+    "static/js/2.09c2cdc1.chunk.js.map": "/static/js/2.09c2cdc1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e0c94f69c24d10f7064c4729ce935126.js": "/precache-manifest.e0c94f69c24d10f7064c4729ce935126.js",
+    "precache-manifest.823802dd97521c14f4e064ea7bd15434.js": "/precache-manifest.823802dd97521c14f4e064ea7bd15434.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.f2f0e8bc.chunk.js.LICENSE.txt": "/static/js/2.f2f0e8bc.chunk.js.LICENSE.txt",
+    "static/js/2.09c2cdc1.chunk.js.LICENSE.txt": "/static/js/2.09c2cdc1.chunk.js.LICENSE.txt",
     "static/media/DroidSansMono.ttf": "/static/media/DroidSansMono.83af227a.ttf",
     "static/media/calorie-police.png": "/static/media/calorie-police.01238b4b.png",
     "static/media/curriculum-ide.png": "/static/media/curriculum-ide.a3bafb7e.png",
@@ -22,7 +22,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d11e5f44.js",
-    "static/js/2.f2f0e8bc.chunk.js",
-    "static/js/main.70fc82fe.chunk.js"
+    "static/js/2.09c2cdc1.chunk.js",
+    "static/js/main.a8eae412.chunk.js"
   ]
 }
