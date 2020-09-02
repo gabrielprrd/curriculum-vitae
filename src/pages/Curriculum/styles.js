@@ -89,12 +89,17 @@ export const ContactInnerSection = styled.div`
 
 export const MailLink = styled.a`
   color: ${({ theme }) => theme.text};
+
+  @media ${device.mobileL} {
+    font-size: 0.8em;
+  }
 `;
 
 export const SocialMediaContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-left: -20px;
 `;
 
 export const GithubContainer = styled.div`

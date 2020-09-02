@@ -93,6 +93,10 @@ export const TechnologiesUsed = styled.div`
       box-shadow: 0px 0px 3px ${({ theme }) => theme.command};
     }
   }
+
+  @media ${device.tablet} {
+    width: 50vw;
+  }
 `;
 
 export const ImageContainer = styled.div`
