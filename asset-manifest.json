@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.js": "/curriculum/static/js/main.4fbc7117.chunk.js",
-    "main.js.map": "/curriculum/static/js/main.4fbc7117.chunk.js.map",
-    "runtime-main.js": "/curriculum/static/js/runtime-main.65dcdb1b.js",
-    "runtime-main.js.map": "/curriculum/static/js/runtime-main.65dcdb1b.js.map",
-    "static/js/2.0970c7f3.chunk.js": "/curriculum/static/js/2.0970c7f3.chunk.js",
-    "static/js/2.0970c7f3.chunk.js.map": "/curriculum/static/js/2.0970c7f3.chunk.js.map",
-    "index.html": "/curriculum/index.html",
-    "precache-manifest.26b58d1fb4930f74975504dc3012cae8.js": "/curriculum/precache-manifest.26b58d1fb4930f74975504dc3012cae8.js",
-    "service-worker.js": "/curriculum/service-worker.js",
-    "static/js/2.0970c7f3.chunk.js.LICENSE.txt": "/curriculum/static/js/2.0970c7f3.chunk.js.LICENSE.txt",
-    "static/media/DroidSansMono.ttf": "/curriculum/static/media/DroidSansMono.83af227a.ttf",
-    "static/media/calorie-police.png": "/curriculum/static/media/calorie-police.01238b4b.png",
-    "static/media/curriculum-ide.png": "/curriculum/static/media/curriculum-ide.a3bafb7e.png",
-    "static/media/folder-logo.png": "/curriculum/static/media/folder-logo.b78e09bf.png",
-    "static/media/gif-searcher.png": "/curriculum/static/media/gif-searcher.5fb9a752.png",
-    "static/media/github-logo.png": "/curriculum/static/media/github-logo.e45ebd52.png",
-    "static/media/js-logo.png": "/curriculum/static/media/js-logo.e8c27f6b.png",
-    "static/media/linkedin-logo.png": "/curriculum/static/media/linkedin-logo.b476feca.png",
-    "static/media/nortada-ecommerce.png": "/curriculum/static/media/nortada-ecommerce.06a30a36.png"
+    "main.js": "/static/js/main.0ed5af38.chunk.js",
+    "main.js.map": "/static/js/main.0ed5af38.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d11e5f44.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d11e5f44.js.map",
+    "static/js/2.2717b4d4.chunk.js": "/static/js/2.2717b4d4.chunk.js",
+    "static/js/2.2717b4d4.chunk.js.map": "/static/js/2.2717b4d4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d93e571b159cea0e67d7ca85625a0c54.js": "/precache-manifest.d93e571b159cea0e67d7ca85625a0c54.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.2717b4d4.chunk.js.LICENSE.txt": "/static/js/2.2717b4d4.chunk.js.LICENSE.txt",
+    "static/media/DroidSansMono.ttf": "/static/media/DroidSansMono.83af227a.ttf",
+    "static/media/calorie-police.png": "/static/media/calorie-police.01238b4b.png",
+    "static/media/curriculum-ide.png": "/static/media/curriculum-ide.a3bafb7e.png",
+    "static/media/folder-logo.png": "/static/media/folder-logo.b78e09bf.png",
+    "static/media/gif-searcher.png": "/static/media/gif-searcher.5fb9a752.png",
+    "static/media/github-logo.png": "/static/media/github-logo.e45ebd52.png",
+    "static/media/js-logo.png": "/static/media/js-logo.e8c27f6b.png",
+    "static/media/linkedin-logo.png": "/static/media/linkedin-logo.b476feca.png",
+    "static/media/nortada-ecommerce.png": "/static/media/nortada-ecommerce.06a30a36.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.65dcdb1b.js",
-    "static/js/2.0970c7f3.chunk.js",
-    "static/js/main.4fbc7117.chunk.js"
+    "static/js/runtime-main.d11e5f44.js",
+    "static/js/2.2717b4d4.chunk.js",
+    "static/js/main.0ed5af38.chunk.js"
   ]
 }
