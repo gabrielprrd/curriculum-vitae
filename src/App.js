@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // Theming
@@ -31,7 +31,7 @@ function App() {
         <>
           <GlobalStyle />
           <Layout>
-            <Router>
+            <HashRouter basename="/">
               <Route exact path="/">
                 <Redirect to="/curriculum" />
               </Route>
@@ -39,7 +39,7 @@ function App() {
               <Route path="/portfolio" component={Portfolio} />
               <Aside />
               <TabsContainer theme={theme} setTheme={setTheme} />
-            </Router>
+            </HashRouter>
             <Terminal />
           </Layout>
         </>
