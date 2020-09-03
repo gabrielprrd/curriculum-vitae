@@ -32,7 +32,7 @@ function App() {
           <GlobalStyle />
           <Layout>
             <Router basename={process.env.PUBLIC_URL}>
-              <Route exact path="/">
+              <Route path={`${process.env.PUBLIC_URL}/`}>
                 <Redirect to={`${process.env.PUBLIC_URL}/curriculum`} />
               </Route>
               <Route
