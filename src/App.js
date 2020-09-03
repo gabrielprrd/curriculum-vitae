@@ -31,8 +31,8 @@ function App() {
         <>
           <GlobalStyle />
           <Layout>
-            <Router basename={`${process.env.PUBLIC_URL}/`}>
-              <Route exact path={`${process.env.PUBLIC_URL}/`}>
+            <Router basename={process.env.PUBLIC_URL}>
+              <Route exact path="/">
                 <Redirect to={`${process.env.PUBLIC_URL}/curriculum`} />
               </Route>
               <Route
