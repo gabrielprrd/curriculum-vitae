@@ -3,7 +3,7 @@ import SPageContainer from '../../assets/GlobalStyles/pageContainer';
 import * as S from './styles';
 
 import Projects from '../../assets/projects';
-import downloadablePdf from '../../assets/downloadablePdf';
+import downloadablePdf from '../../assets/pdf/downloadablePdf';
 
 // Images
 import githubLogo from '../../assets/images/github-logo.png';
@@ -43,7 +43,7 @@ export default function Curriculum() {
           <S.PositionContainer
             isSecondAnimationOver={secondAnimation.isAnimationOver}
           >
-            <h2>Full Stack Web Developer</h2>
+            <h2>Full Stack Developer</h2>
           </S.PositionContainer>
         )}
         <S.ContactInfoSection>
@@ -65,7 +65,7 @@ export default function Curriculum() {
             <span role="img" aria-label="computer emoji">
               🏘
             </span>
-            <p>Campanhã, Porto</p>
+            <p>Porto, Portugal</p>
           </S.ContactInnerSection>
 
           <S.SocialMediaContainer>
@@ -108,28 +108,30 @@ export default function Curriculum() {
         <S.TechSkillsSection>
           <h2>Technical skills</h2>
           <S.TechSkillsInnerContainer>
-            <h3>Front end</h3>
-            <p>- HTML, (S)CSS and Javascript</p>
-            <p>- React: Redux, Router, Styled-components</p>
+            <h3>Front-end</h3>
+            <p>- HTML, CSS/SASS and Javascript</p>
+            <p>- React, Redux and Styled-components</p>
             <p>- Styling libraries such as Bootstrap and Material-UI</p>
-            <p>- Knowledge of Vue.js</p>
+            <p>- Template engines such as Handlebars and Thymeleaf</p>
           </S.TechSkillsInnerContainer>
 
           <S.TechSkillsInnerContainer>
-            <h3>Back end</h3>
-            <p>- Node.js and Express</p>
-            <p>- Mongoose for MongoDB</p>
-            <p>- Sequelize for MySQL</p>
-            <p>- Authentication with JWT</p>
+            <h3>Back-end</h3>
+            <p>- Java, Java EE and Spring Framework</p>
+            <p>- MySQL Database Service</p>
+            <p>- MongoDB</p>
+            <p>- Knowledge of Node.js and Express</p>
           </S.TechSkillsInnerContainer>
 
           <S.TechSkillsInnerContainer>
             <h3>Readability, organization and team tools</h3>
             <p>- Version control with Git</p>
-            <p>- Well organized commits with Husky, Commitlint and Commitzen</p>
+            <p>- Agile Methodologies</p>
+            <p>
+              - Well organized commits with Husky, Commitlint and Commitizen
+            </p>
             <p>- Code linting with ESLint and Prettier</p>
-            <p>- Better deployment with Docker containers</p>
-            <p>- Knowledge of Jest for unit testing</p>
+            <p>- Knowledge of Jest and JUnit for unit testing</p>
           </S.TechSkillsInnerContainer>
         </S.TechSkillsSection>
 

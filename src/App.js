@@ -18,6 +18,7 @@ import TabsContainer from './components/TabsContainer/index';
 // Pages
 import Curriculum from './pages/Curriculum/index';
 import Portfolio from './pages/Portfolio/index';
+import Pdf from './pages/Pdf/index';
 
 // Context
 import FocusedFileProvider from './contexts/focusedFileContext';
@@ -42,6 +43,10 @@ function App() {
               <Route
                 path={`${process.env.PUBLIC_URL}/portfolio`}
                 component={Portfolio}
+              />
+              <Route
+                path={`${process.env.PUBLIC_URL}/resume`}
+                component={Pdf}
               />
               <Aside />
               <TabsContainer theme={theme} setTheme={setTheme} />

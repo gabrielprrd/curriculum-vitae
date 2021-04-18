@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import * as S from './styles';
 
-import downloadablePdf from '../../assets/downloadablePdf';
+import downloadablePdf from '../../assets/pdf/downloadablePdf';
 
 export default function Terminal() {
   const [input, setInput] = useState('');
