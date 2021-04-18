@@ -14,8 +14,9 @@ export const TabsContainer = styled.div`
     color: ${({ theme }) => theme.comment};
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     align-items: center;
+    height: 100%;
   }
 
   @media ${device.mobileL} {
@@ -23,7 +24,7 @@ export const TabsContainer = styled.div`
     background: ${({ theme }) => theme.bodyPrimary};
     flex-direction: column;
     width: 100%;
-    height: 160px;
+    height: 200px;
     position: fixed;
     top: ${({ isMenuClicked }) => (isMenuClicked ? '0' : '-100%')};
     transition: 0.4s;
@@ -97,7 +98,7 @@ export const BurgerMenu = styled.div`
   @media ${device.mobileL} {
     display: inline-block;
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
   }
 `;
