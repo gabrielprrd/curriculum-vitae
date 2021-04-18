@@ -21,7 +21,7 @@ You can check it deployed [here](https://gabrielprrd.github.io).
 To run locally on development mode, simply clone this repo and then:
 ```sh
 $ npm install
-$ npm run dev
+$ npm start
 ```
 
 ### Reach me out
